@@ -212,6 +212,13 @@ export default {
       }
     }
   },
+  methods: {
+    playDing () {
+      let sound = require('../assets/ding.mp3')
+      let ding = new Audio(sound)
+      ding.play()
+    }
+  },
   components: {
     VueOdometer
   },
@@ -295,6 +302,17 @@ export default {
     fontSize: {
       type: String,
       default: null
+    },
+    ding: {
+      type: Boolean,
+      default: false
+    }
+  },
+  watch: {
+    'count' (newValue, oldValue) {
+      if (this.ding && newValue > oldValue) {
+        this.playDing()
+      }
     }
   }
 }

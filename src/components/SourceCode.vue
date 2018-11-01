@@ -28,6 +28,9 @@
                     <span v-if="animated">
                       &nbsp;&nbsp;&nbsp;&nbsp;:animated="{{ animated }}"<br>
                     </span>
+                    <span v-if="ding">
+                      &nbsp;&nbsp;&nbsp;&nbsp;:ding="{{ ding }}"<br>
+                    </span>
                     <span v-if="top">
                       &nbsp;&nbsp;&nbsp;&nbsp;:top="{{ top }}"<br>
                     </span>
@@ -68,6 +71,7 @@ export default {
     'counterTextColor',
     'iconColor',
     'animated',
+    'ding',
     'prefixPlus',
     'counterPadding',
     'fontSize'

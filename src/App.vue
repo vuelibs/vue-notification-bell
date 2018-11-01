@@ -89,6 +89,10 @@
         <input type="checkbox" v-model="animated" id="animated">
         <label for="animated">Animated</label>
       </div>
+      <div class="input-container">
+        <input type="checkbox" v-model="ding" id="ding">
+        <label for="ding">Ding!</label>
+      </div>
       <div class="docs">
         <a href="https://github.com/Carrene/vue-notification-bell" target="_blank">Docs</a>
       </div>
@@ -103,6 +107,7 @@
                        :counterTextColor="counterTextColor"
                        :iconColor="iconColor"
                        :animated="animated"
+                       :ding="ding"
                        :top="top"
                        :left="left"
                        :prefixPlus="prefixPlus"
@@ -119,6 +124,7 @@
             :counterTextColor="counterTextColor"
             :iconColor="iconColor"
             :animated="animated"
+            :ding="ding"
             :top="top"
             :left="left"
             :prefixPlus="prefixPlus"
@@ -154,7 +160,8 @@ export default {
       counterBackgroundColor: '#FF0000',
       counterTextColor: '#FFFFFF',
       iconColor: '#000000',
-      animated: false,
+      animated: true,
+      ding: false,
       prefixPlus: false,
       customFontSize: false,
       fontSize: null,
